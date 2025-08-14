@@ -24,11 +24,11 @@ For a Node application you:
 **Solution:**  
 - Create a new Blob store
 
-![blob_store](Exercise2_1.png)
+![blob_store](figures/Exercise2_1.png)
 
 - Create a new **npm (hosted)** repository that uses the new store
 
-![npm_hosted](Exercise2_2.png)
+![npm_hosted](figures/Exercise2_2.png)
 
 ***
 
@@ -39,11 +39,11 @@ For a Node application you:
 **Solution:**  
 - Create a new role, which has `"nx-repository-admin-npm-repo1-*"` and `"nx-repository-view-npm-*-*"` Applied Privileges
 
-![role_1_creation](Exercise3_1.png)
+![role_1_creation](figures/Exercise3_1.png)
 
 - Create a new user, and grant this new role to it
 
-![user_1_creation](Exercise3_2.png)
+![user_1_creation](figures/Exercise3_2.png)
 
 ***
 
@@ -77,7 +77,7 @@ For a Java application you:
 **Solution:**  
 - Create a new **maven2** repository which uses the blob store created in the earlier step
 
-![maven_2_repo](Exercise5_1.png)
+![maven_2_repo](figures/Exercise5_1.png)
 
 ***
 
@@ -89,7 +89,7 @@ For a Java application you:
 - Create a new role, which has `"nx-repository-admin-maven2-maven-central-*"` and `"nx-repository-view-maven2-*-*"` Applied Privileges
 - Create a new user, and grant this new role to it
 
-![user_2_creation](Exercise6_1.png)
+![user_2_creation](figures/Exercise6_1.png)
 
 ***
 
@@ -166,12 +166,12 @@ dependencies {
 **Solution:**  
 - Create a new user in the Nexus UI, and grant *both* of the roles previously created to it
 
-![user_3_creation](Exercise8_1.png)
+![user_3_creation](figures/Exercise8_1.png)
 
 - Execute `curl -u {user}:{password} -X GET 'http://{nexus-ip}:8081/service/rest/v1/components?repository={repo-name}&sort=version'` on the DigitalOcean droplet
 - Execute `wget` followed by the result of the previous command
 
-![wget_response](Exercise8_2.png)
+![wget_response](figures/Exercise8_2.png)
 
 - Execute `java -jar java-app-1.0.jar`
 
@@ -205,4 +205,4 @@ java -jar java-app.jar
 
 - Execute the shell script on the server
 
-![shell_script](Exercise9_1.png)
+![shell_script](figures/Exercise9_1.png)
